@@ -26,7 +26,7 @@ const Contact = ( {data} ) => {
           </div>
         </header>
           <main className="page">
-            <section className="layout-page">
+            <section className="layout-page-2-col">
               <article className="contact-info">
                  {/*  <SocialMediaBar /> */}
                   <h3>Tveka inte att kontakta oss!</h3>
