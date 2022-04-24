@@ -26,16 +26,17 @@ export default function Home() {
             </div>
           </div>
         </header>
+        <div className="black-block"/>
         <main className="page">
-        <section className="layout-page">
+        <section className="layout-page-1-col">
 {/*            <div
             
             className="home-article-img">
             
           </div> */}
           <article>
-            <h1>Välkommen!</h1>
-            <p>Fullscreen AB är ett nystartat produktionsbolag med fokus på dokumentärt berättande. Företagskunder kan läsa mer
+            <h1>Välkommen</h1>
+            <p>Fullscreen AB är ett nystartat produktionsbolag med fokus på dokumentärt berättande, vi gör berättelser som berör. Företagskunder kan läsa mer
 under content-fliken. </p>
           <button>Kontakta oss</button>
           </article>
