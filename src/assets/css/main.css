@@ -92,8 +92,8 @@ html {
 }
 
 body {
-  background: var(--black);
-  color: var(--white);
+  background: var(--white);
+  color: var(--black);
   font-family: var(--bodyFont);
   font-weight: 400;
   line-height: 1.75;
@@ -103,7 +103,6 @@ body {
 p {
   margin: 0;
   margin-bottom: 1rem;
-  max-width: 40em;
   font-weight: 300;
 }
 
@@ -157,10 +156,16 @@ ul {
 a {
   text-decoration: none;
 }
+
+.black-block {
+  background-color: var(--black);
+  height: 4rem;
+  
+}
 .logo {
   fill:#222;
   color: #222;
-  height: 3rem;
+  height: 2.3rem;
 } 
 .img {
   width: 100%;
@@ -280,7 +285,7 @@ button.block {
   margin: 0 auto;
 }
 .page {
-  background-color: var(--black);
+  background-color: var(--white);
   width: 90vw;
   max-width: var(--max-width);
   margin: 3rem auto;
@@ -288,7 +293,12 @@ button.block {
   margin-bottom: 3rem;
 }
 
-.layout-page {
+.layout-page-1-col {
+  display: flex;
+  background-color: var(--white);
+}
+
+.layout-page-2-col {
   display: grid;
   gap: 2rem 3rem;
 }
@@ -296,7 +306,7 @@ button.block {
 }
 
 @media screen and (min-width: 992px) {
-  .layout-page {
+  .layout-page-2-col {
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
@@ -378,28 +388,28 @@ form > *:last-child {
 /* Navbar */
 /*#########*/
 .navbar {
-  /* background-color: var(--black); */
+  background-color: var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
+  /* position: absolute;
+  top: 0; */
   width: 100vw;
   z-index: 2;
 }
 .nav-center {
-  width: 90vw;
-  max-width: var(--max-width);
+  width: 100vw;
+  /* max-width: var(--max-width); */
 }
 .nav-header {
-  height: 5rem;
+  height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .nav-header img {
   width: 16rem;
-  margin-left: -3rem;
+  margin-left: -2rem;
   margin-bottom: -9px;
 }
 .nav-btn {
@@ -458,7 +468,7 @@ form > *:last-child {
 
 @media screen and (min-width: 992px) {
   .navbar {
-    height: 6rem;
+    height: 4rem;
   }
   .nav-center {
    
@@ -486,7 +496,7 @@ form > *:last-child {
     padding: 0;
     border-top: none;
     margin-right: 1.5rem;
-    font-size: 1rem;
+    font-size: .8rem;
   }
   .contact-link {
     width: 100%;
@@ -628,12 +638,11 @@ form > *:last-child {
 /*#########*/
 
 .hero-img {
-  height: 100%;
+  /* height: 100%; */
   /* border-radius: var(--borderRadius); */
 }
 .hero {
   height: 50vh;
-  position: relative;
   width: 100vw;
 }
 .hero-container {
@@ -645,7 +654,6 @@ form > *:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*  background: rgba(0, 0, 0, 0.4); */
   border-radius: var(--borderRadius);
 }
 .hero-text {
