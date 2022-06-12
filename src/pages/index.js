@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from '../components/SEO'
 import { StaticImage } from "gatsby-plugin-image"
-import video from "../assets/video/22_04_Fullscreen_Showreel_v1.mp4"
+import video from "../assets/video/22_04_Fullscreen_Showreel_ref016.mp4"
 export default function Home() {
   return (
     <Layout>
@@ -16,7 +16,7 @@ export default function Home() {
           placeholder="traced-svg"
           layout="fullWidth">
           </StaticImage> */}
-  <video className="object-cover" controls muted autoPlay loop playsinline>
+  <video className="object-cover" muted autoPlay loop playsInline>
       <source src={video} type="video/mp4" />
     </video>          
           <div className="hero-container">
@@ -26,7 +26,7 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <div className="black-block"/>
+       {/*  <div className="black-block"/> */}
         <main className="page">
         <section className="layout-page-1-col">
 {/*            <div
