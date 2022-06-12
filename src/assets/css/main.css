@@ -59,7 +59,7 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
   /* typography */
-  --defaultFontSize: 24px;
+  --defaultFontSize: 16px;
   --headingFont: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --bodyFont: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -106,6 +106,12 @@ p {
   font-weight: 300;
 }
 
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 h1,
 h2,
 h3,
@@ -119,7 +125,7 @@ h5 {
 }
 
 h1 {
-  font-size: 3.052rem;
+  font-size: 3.45rem;
 }
 
 h2 {
@@ -137,6 +143,30 @@ h4 {
 h5 {
   font-size: 1.25rem;
 }
+
+
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 3.45rem;
+  }
+  
+  h2 {
+    font-size: 2.441rem;
+  }
+  
+  h3 {
+    font-size: 1.953rem;
+  }
+  
+  h4 {
+    font-size: 1.563rem;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+
 
 small,
 .text-small {
@@ -165,7 +195,8 @@ a {
 .logo {
   fill:#222;
   color: #222;
-  height: 2.3rem;
+  height: 1.5rem;
+  margin-left: -3rem;
 } 
 .img {
   width: 100%;
@@ -289,7 +320,7 @@ button.block {
   width: 90vw;
   max-width: var(--max-width);
   margin: 3rem auto;
-  min-height: calc(100vh - (50vh + 4rem));
+  min-height: calc(100vh - 11rem);
   margin-bottom: 3rem;
 }
 
@@ -302,8 +333,7 @@ button.block {
   display: grid;
   gap: 2rem 3rem;
 }
-.layout-page h1 {
-}
+
 
 @media screen and (min-width: 992px) {
   .layout-page-2-col {
@@ -380,13 +410,15 @@ form > *:last-child {
   animation: spinner 0.6s linear infinite;
 }
 
-/*#########*/
+/*######################################################*/
 /* END OF GLOBALS */
-/*#########*/
+/*######################################################*/
 
-/*#########*/
-/* Navbar */
-/*#########*/
+/*######################################################*/
+/* NAVBAR MOBILE*/
+/*######################################################*/
+
+
 .navbar {
   background-color: var(--black);
   display: flex;
@@ -409,7 +441,7 @@ form > *:last-child {
 }
 .nav-header img {
   width: 16rem;
-  margin-left: -2rem;
+  margin-left: -4.5rem;
   margin-bottom: -9px;
 }
 .nav-btn {
@@ -417,7 +449,7 @@ form > *:last-child {
   background: none;
 }
 .nav-btn svg {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--white);
 }
 .nav-links {
@@ -461,12 +493,21 @@ form > *:last-child {
 
 .object-cover {
  /*  margin-top: 5rem; */
-  width: 100%;
-  height: 100%;
   object-fit: cover;
+  min-width: 100%;
 }
 
+/*######################################################*/
+/* NAVBAR DESKTOP*/
+/*######################################################*/
+
+
 @media screen and (min-width: 992px) {
+
+  .logo {
+    height: 2.3rem;
+    
+  }
   .navbar {
     height: 4rem;
   }
@@ -480,6 +521,9 @@ form > *:last-child {
     padding: 0;
     margin-right: 2rem;
     height: auto;
+  }
+  .nav-header img {
+    margin-left: -2rem;
   }
 
   .nav-btn {
@@ -510,9 +554,9 @@ form > *:last-child {
   }
 }
 
-/*#########*/
-/* Socal Media */
-/*#########*/
+/*######################################################*/
+/* SOCIAL MEDIA MOBILE*/
+/*######################################################*/
 
 .socialMediaBar {
   display: flex;
@@ -540,6 +584,10 @@ form > *:last-child {
   color: var(--grey-1000);
 }
 
+/*######################################################*/
+/* SOCIAL MEDIA DESKTOP*/
+/*######################################################*/
+
 @media screen and (min-width: 992px) {
   .socialMediaBar {
     display: flex;
@@ -551,9 +599,9 @@ form > *:last-child {
   }
 }
 
-/*#########*/
-/* Footer */
-/*#########*/
+/*######################################################*/
+/* FOOTER MOBILE*/
+/*######################################################*/
 .page-footer {
   text-align: center;
   height: 4rem;
@@ -561,6 +609,9 @@ form > *:last-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-self: flex-end;
+  justify-self: flex-end;
+  width: 100%;
   background: var(--accent-secondary);
   color: var(--white);
 }
@@ -575,9 +626,10 @@ form > *:last-child {
   color: var(--accent-primary);
 }
 
-/*#########*/
-/* Error */
-/*#########*/
+/*######################################################*/
+/* ERROR MOBILE*/
+/*######################################################*/
+
 .error-page {
   min-height: calc(100vh - (6rem + 4rem));
   text-align: center;
@@ -587,62 +639,17 @@ form > *:last-child {
   font-size: 9rem;
 }
 
-/*#########*/
-/* Home */
-/*#########*/
-.home-article-img {
-  order: 1;
-}
-
-@media screen and (min-width: 992px) {
-  .home-article-img {
-  order: 0;
-}
-}
+/*######################################################*/
+/* HOME MOBILE*/
+/*######################################################*/
 
 
-/*#########*/
-/* About */
-/*#########*/
 
-.about-page h2 {
-  text-transform: none;
-  font-weight: bold;
-}
-.about-page {
-  display: grid;
-  gap: 2rem 4rem;
-  padding-bottom: 3rem;
-}
-.about-img {
-  border-radius: var(--borderRadius);
-  height: 500px;
-}
+/*######################################################*/
+/* HERO MOBILE*/
+/*######################################################*/
 
-@media screen and (min-width: 992px) {
-  .about-page {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    height: 400px;
-  }
-  .about-img {
-    height: 100%;
-  }
-}
-
-.featured-blogPosts > h5 {
-  margin: 2rem 0 2rem 0;
-}
-/*#########*/
-/* Hero */
-/*#########*/
-
-.hero-img {
-  /* height: 100%; */
-  /* border-radius: var(--borderRadius); */
-}
 .hero {
-  height: 50vh;
   width: 100vw;
 }
 .hero-container {
@@ -650,7 +657,6 @@ form > *:last-child {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -661,263 +667,13 @@ form > *:last-child {
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
-  .hero-text h1 {
-    font-size: 4rem;
-    margin-bottom: 0;
-  }
-}
+/*######################################################*/
+/* HERO DESKTOP*/
+/*######################################################*/
 
 
 
-/*#########*/
-/* Blog */
-/*#########*/
-
-.blog-page {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.blogPostMain {
-  display: block;
-  margin-bottom: 2rem;;
-}
-
-.blogPostMain-img {
-  height: 20rem;
-  border-radius: var(--borderRadius);
-}
-.blogPostMain h5 {
-  margin-bottom: 0;
-  margin-top: 0.8rem;
-  line-height: 1;
-  color: var(--textColor);
-  font-weight: 500;
-}
-.blogPostMain p {
-  margin-bottom: 0;
-  line-height: 1;
-  color: var(--grey-800);
-  margin-top: 0.5rem;
-}
-
-.blogPostAuthor {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.2rem;
-  
-}
-
-.blogPost-content {
-  column-count: 2;
-}
 
 
-@media screen and (min-width: 992px) {
-  .blog-page {
-    display: grid;
-    grid-template-columns: 20% auto;
-  }
 
-  .blogPosts-list-main {
-  margin: 0 0 0 2rem;
 
-  }
-
-  .blogPostMain {
-    margin-top: 2rem;
-  }
-
-  .fullBlogPost {
-    margin: 2rem 0 0 2rem;
-  }
-}
-
-/*#########*/
-/* blogPosts */
-/*#########*/
-.blogPosts-container {
-  display: grid;
-  gap: 2rem 1rem;
-}
-
-.blogPosts-list {
-  display: grid;
-  gap: 2rem 1rem;
-  padding-bottom: 3rem;
-}
-
-.blog-item-line {
-  border: 0;
-  width: 20%;
-  border-top: 3px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  margin: 0.8rem 0;
-}
-.tags-container {
-  order: 1;
-  display: flex;
-  flex-direction: column;
-}
-.tags-list {
-  display:flex;
-  flex-direction: column;
-}
-
-.postTagsList {
-  display: flex;
-  flex-direction: row;
-  margin-top: 1rem;
-
-}
-.postTagsList a {
-  margin: 0 1rem 0 0;
-  text-transform: Capitalize;
-  background-color: var(--accent-secondary);
-  color: var(--white);
-  font-size: .7rem;
-  padding: .1rem .7rem;
-  border-radius: .1rem;
-}
-.postTagsList a:hover {
-  opacity: 0.7;
-  transition: var(--transition);
-}
-
-.tags-list-line {
-  border: 0;
-  width: 100%;
-  height: 1rem;
-  border-top: 3px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  margin: 2rem 0 0.7rem 0;
-}
-.tags-container h4 {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-.tags-list a {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: .9rem;
-  display: block;
-  color: var(--grey-800);
-  transition: var(--transition);
-  letter-spacing: var(--letterSpacing);
-  margin-bottom: .8rem;
-}
-.tags-list a:hover {
-  color: var(--accent-secondary);
-}
-.blogPost {
-  display: block;
-}
-.blogPost-img {
-  height: 15rem;
-  border-radius: var(--borderRadius);
-}
-.blogPost h5 {
-  margin-bottom: 0;
-  margin-top: 0.8rem;
-  line-height: 1;
-  color: var(--textColor);
-  font-weight: 500;
-}
-.blogPost p {
-  margin-bottom: 0;
-  line-height: 1;
-  color: var(--grey-800);
-  margin-top: 0.5rem;
-}
-@media screen and (min-width: 576px) {
-
-  
-  .blogPosts-list {
-    grid-template-columns: 1fr 1fr;
-  }
-  .blogPost-img {
-    height: 15rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
-
-  .nav-link {
-    background-color: transparent
-  }
-  
-  .blogPosts-container {
-    grid-template-columns: 200px 1fr;
-    gap: 1rem;
-  }
-  .blogPosts-list {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .blogPost-img {
-    height: 15rem;
-  }
-
-  .blogPost p {
-    font-size: 0.85rem;
-  }
-  .tags-container {
-    order: 0;
-    position: sticky;
-    top: 0rem;
-    height: calc(100vh - 4rem);
-  }
-  .tags-list {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .blogPost h5 {
-    font-size: 1.15rem;
-  }
-  .blogPosts-list {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-/*#########*/
-/* Tags */
-/*#########*/
-
-.tags-page {
-  display: grid;
-  gap: 2rem;
-  padding-bottom: 3rem;
-}
-.tag {
-  background: var(--grey-700);
-  border-radius: var(--borderRadius);
-  text-align: center;
-  color: var(--white);
-  transition: var(--transition);
-  padding: 0.75rem 0;
-}
-.tag:hover {
-  background: var(--accent-secondary);
-}
-.tag h5,
-.tag p {
-  margin-bottom: 0;
-}
-.tag h5 {
-  font-weight: 600;
-}
-@media screen and (min-width: 576px) {
-  .tags-page {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (min-width: 992px) {
-  .tags-page {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
