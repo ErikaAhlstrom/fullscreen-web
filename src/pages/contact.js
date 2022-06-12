@@ -11,13 +11,13 @@ const Contact = ( {data} ) => {
         <Layout>
           <SEO title="Contact"/>
           <header className="hero">
-          <StaticImage
+{/*           <StaticImage
           src="../assets/images/hero.jpg"
           alt="Leaves"
           className="hero-img"
           placeholder="traced-svg"
           layout="fullWidth">
-          </StaticImage>
+          </StaticImage> */}
           <div className="hero-container">
             <div className="hero-text">
             {/*   <h1>Berättelser som berör</h1> */}
